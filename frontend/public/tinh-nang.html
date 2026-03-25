@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tính năng - ChatRealtime</title>
+  <link rel="stylesheet" href="/style.css?v=12" />
+</head>
+<body class="landing-body about-body">
+  <header class="landing-header">
+    <a href="/" class="brand landing-brand">
+      <img src="/assets/images/logo.png" alt="Logo ChatRealtime" class="brand-logo pulse-logo" />
+      <span>ChatRealtime</span>
+    </a>
+
+    <nav class="landing-nav">
+      <a href="/gioi-thieu">Giới thiệu</a>
+      <a href="/tinh-nang">Tính năng</a>
+      <a href="/chat">Phòng chat</a>
+    </nav>
+
+    <div class="landing-actions" id="guestActions">
+      <a class="ghost-btn" href="/dang-nhap">Đăng nhập</a>
+      <a class="primary-btn" href="/dang-ky">Bắt đầu miễn phí</a>
+    </div>
+
+    <div class="landing-actions landing-account hidden" id="accountActions">
+      <span class="account-chip" id="homeAccountName"></span>
+      <a class="ghost-btn" href="/chat">Phòng chat</a>
+      <a class="ghost-btn hidden" href="/admin/dashboard" id="homeAdminBtn">Trang admin</a>
+      <button class="primary-btn" type="button" id="homeLogoutBtn">Đăng xuất</button>
+    </div>
+  </header>
+
+  <main class="intro-layout">
+    <div></div>
+
+    <article class="intro-content animate-fade-up">
+      <h1>Tổng quan các tính năng nổi bật của website ChatRealtime</h1>
+
+      <p>
+        ChatRealtime được xây dựng không chỉ để nhắn tin, mà còn để trình bày rõ ràng các thành phần
+        quan trọng của một website realtime hoàn chỉnh. Từ đăng ký tài khoản, đăng nhập, vào phòng chat,
+        lưu lịch sử tin nhắn đến quản lý hệ thống bằng tài khoản admin, mọi chức năng đều được tổ chức
+        để người dùng dễ thao tác và người làm đồ án dễ demo.
+      </p>
+
+      <figure class="intro-figure">
+        <img src="/assets/images/logo.png" alt="Logo ChatRealtime" class="about-large-image" />
+        <figcaption>ChatRealtime tập trung vào các tính năng thực tế nhưng vẫn gọn để dễ thuyết trình.</figcaption>
+      </figure>
+
+      <h2>1. Đăng ký và đăng nhập tài khoản</h2>
+      <p>
+        Người dùng có thể tạo tài khoản mới bằng họ và tên, username, email và mật khẩu. Sau khi đăng ký
+        xong, hệ thống tự động đăng nhập và đưa người dùng quay về trang chủ. Ngoài ra, việc đăng nhập cũng
+        linh hoạt hơn nhờ hỗ trợ cả username lẫn email.
+      </p>
+
+      <h2>2. Vào phòng chat theo danh sách hợp lệ</h2>
+      <p>
+        Website không cho tạo phòng tùy ý ở phía user. Người dùng sẽ vào các phòng đã được admin chuẩn bị sẵn.
+        Cách tổ chức này giúp việc demo trở nên rõ ràng, kiểm soát tốt nội dung phòng và phù hợp với hướng làm
+        đồ án quản lý phòng chat.
+      </p>
+
+      <h2>3. Nhắn tin realtime</h2>
+      <p>
+        Đây là tính năng trung tâm của hệ thống. Khi một người gửi tin nhắn, những người khác trong cùng phòng
+        sẽ nhận được gần như ngay lập tức thông qua Socket.io. Điều này giúp website thể hiện đúng bản chất của
+        một ứng dụng chat thời gian thực.
+      </p>
+
+      <h2>4. Hiển thị họ và tên trong đoạn chat</h2>
+      <p>
+        Thay vì chỉ hiển thị username kỹ thuật, hệ thống lấy họ và tên khi đăng ký để hiển thị trong khung chat.
+        Điều này làm giao diện hội thoại thân thiện hơn, giống với các ứng dụng chat thực tế hơn và cũng đẹp hơn khi demo.
+      </p>
+
+      <figure class="intro-figure intro-figure-soft">
+        <img src="/assets/images/logo.png" alt="Minh họa tính năng ChatRealtime" class="intro-inline-image" />
+        <figcaption>Thông tin người dùng và luồng chat được tổ chức đơn giản, dễ theo dõi.</figcaption>
+      </figure>
+
+      <h2>5. Chế độ chat demo</h2>
+      <p>
+        Website có sẵn chế độ dùng thử để vào chat nhanh mà không cần đăng ký tài khoản mới. Tính năng này đặc biệt
+        hữu ích trong các buổi demo hoặc khi cần mở nhanh một luồng chat mẫu mà không muốn thao tác đăng ký lại từ đầu.
+      </p>
+
+      <h2>6. Trang admin riêng</h2>
+      <p>
+        Tài khoản admin có khu vực riêng để theo dõi và quản lý hệ thống. Admin có thể xem dashboard tổng quan,
+        theo dõi số lượng phòng, số user, số user online và một số thống kê cơ bản để trình bày phần quản trị.
+      </p>
+
+      <h2>7. Quản lý phòng chat</h2>
+      <p>
+        Trong module quản lý phòng, admin có thể tạo phòng mới, xem số người online, tổng tin nhắn và xóa phòng khi cần.
+        Khi một phòng bị xóa, phần chat cũng xử lý đúng trạng thái để tránh việc người dùng tiếp tục gửi tin vào phòng không còn tồn tại.
+      </p>
+
+      <h2>8. Quản lý user</h2>
+      <p>
+        Admin có thể xem danh sách user, trạng thái online hoặc offline, role hiện tại, phòng đang tham gia, đồng thời
+        thực hiện các thao tác như khóa, mở khóa hoặc xóa user. Đây là phần giúp hệ thống có chiều sâu hơn về mặt quản trị.
+      </p>
+
+      <h2>9. Phân quyền và điều hướng rõ ràng</h2>
+      <p>
+        Website phân biệt rõ khu vực dành cho user và khu vực dành cho admin. Người dùng thường không thể truy cập trang
+        quản trị, trong khi admin có thêm nút chuyển nhanh sang dashboard. Cách tổ chức này giúp cấu trúc hệ thống rõ ràng,
+        dễ giải thích trong báo cáo và dễ mở rộng về sau.
+      </p>
+    </article>
+
+    <div></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-surface">
+      <div class="site-footer-top">
+        <div class="site-footer-brand">
+          <a href="/" class="brand site-footer-logo">
+            <img src="/assets/images/logo.png" alt="Logo ChatRealtime" class="brand-logo" />
+            <span>ChatRealtime</span>
+          </a>
+          <p>
+            Nền tảng chat realtime gọn nhẹ dành cho demo, thuyết trình và phát triển đồ án với giao diện
+            tiếng Việt, quản lý phòng chat và khu vực admin riêng.
+          </p>
+        </div>
+
+        <div class="site-footer-columns">
+          <section class="site-footer-column">
+            <h3>Sản phẩm</h3>
+            <a href="/gioi-thieu">Giới thiệu</a>
+            <a href="/tinh-nang">Tính năng</a>
+            <a href="/chat">Phòng chat</a>
+          </section>
+
+          <section class="site-footer-column">
+            <h3>Điều khoản</h3>
+            <span>Data Center</span>
+            <span>Uptime Server</span>
+            <span>Anti DDoS</span>
+          </section>
+
+          <section class="site-footer-column">
+            <h3>Liên hệ</h3>
+            <a href="https://www.facebook.com/otori.kushiro#" target="_blank" rel="noreferrer">Facebook</a>
+            <a href="https://t.me/huubinh215" target="_blank" rel="noreferrer">Telegram</a>
+            <a href="https://www.youtube.com/@Vpshuubinhtm" target="_blank" rel="noreferrer">YouTube</a>
+          </section>
+        </div>
+      </div>
+
+      <div class="site-footer-bottom">
+        <p>© 2026 NgocMinh-Dev. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/home.js"></script>
+</body>
+</html>

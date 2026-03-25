@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng nhập admin - ChatRealtime</title>
+  <link rel="stylesheet" href="/style.css?v=11" />
+</head>
+<body class="auth-body">
+  <section class="auth-layout animate-pop">
+    <div class="auth-left">
+      <a href="/" class="brand">
+        <img src="/assets/images/logo.png" alt="Logo ChatRealtime" class="brand-logo pulse-logo" />
+        <span>ChatRealtime Admin</span>
+      </a>
+      <h2>Đăng nhập quản trị</h2>
+      <p>Sử dụng tài khoản admin để quản lý phòng, user và theo dõi trạng thái online/offline.</p>
+    </div>
+
+    <div class="auth-right">
+      <form class="auth-form" id="adminLoginForm">
+        <h1>Đăng nhập admin</h1>
+        <p class="sub">Nhập username admin hoặc email admin.</p>
+
+        <label for="adminLoginInput">Username / Email</label>
+        <input id="adminLoginInput" type="text" placeholder="admin" required />
+
+        <label for="adminPasswordInput">Mật khẩu</label>
+        <input id="adminPasswordInput" type="password" placeholder="Nhập mật khẩu admin" required />
+
+        <button class="primary-btn auth-submit" type="submit">Vào dashboard</button>
+        <p id="adminLoginMessage" class="error-text"></p>
+
+        <p class="auth-footer">
+          <a href="/dang-nhap">Về trang đăng nhập user</a>
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <script src="/admin-login.js"></script>
+</body>
+</html>

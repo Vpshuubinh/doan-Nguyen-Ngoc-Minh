@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng ký - ChatRealtime</title>
+  <link rel="stylesheet" href="style.css?v=11" />
+</head>
+<body class="auth-body" data-auth-mode="register">
+  <section class="auth-layout animate-pop">
+    <div class="auth-left">
+      <a href="/" class="brand">
+        <img src="/assets/images/logo.png" alt="Logo ChatRealtime" class="brand-logo pulse-logo" />
+        <span>ChatRealtime</span>
+      </a>
+      <h2>Tạo tài khoản mới</h2>
+      <p>Đăng ký tài khoản user để chat và để admin theo dõi trạng thái trong dashboard.</p>
+    </div>
+
+    <div class="auth-right">
+      <form class="auth-form" id="authForm">
+        <h1>Đăng ký</h1>
+        <p class="sub">Điền thông tin để tạo tài khoản mới.</p>
+
+        <label for="fullNameInput">Họ và tên</label>
+        <input id="fullNameInput" name="fullName" type="text" placeholder="Nguyễn Văn A" required />
+
+        <label for="usernameInput">Username</label>
+        <input id="usernameInput" name="username" type="text" placeholder="ngocminh" required />
+
+        <label for="emailInput">Email</label>
+        <input id="emailInput" name="email" type="email" placeholder="you@example.com" required />
+
+        <label for="passwordInput">Mật khẩu</label>
+        <input id="passwordInput" name="password" type="password" placeholder="Tối thiểu 6 ký tự" required />
+
+        <button class="primary-btn auth-submit" type="submit">Tạo tài khoản</button>
+        <p id="authMessage" class="error-text"></p>
+
+        <p class="auth-footer">
+          Đã có tài khoản? <a href="/dang-nhap">Đăng nhập</a>
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer auth-footer-shell">
+    <div class="site-footer-top">
+      <div class="site-footer-brand">
+        <a href="/" class="brand landing-brand">
+          <img src="/assets/images/logo.png" alt="Logo ChatRealtime" class="brand-logo" />
+          <span>ChatRealtime</span>
+        </a>
+        <p>
+          Nền tảng chat realtime gọn nhẹ dành cho demo, thuyết trình và phát triển đồ án với giao diện
+          tiếng Việt, quản lý phòng chat và khu vực admin riêng.
+        </p>
+      </div>
+
+      <div class="site-footer-columns">
+        <section class="site-footer-column">
+          <h3>Sản phẩm</h3>
+          <a href="/gioi-thieu">Giới thiệu</a>
+          <a href="/tinh-nang">Tính năng</a>
+          <a href="/chat">Phòng chat</a>
+        </section>
+
+        <section class="site-footer-column">
+          <h3>Điều khoản</h3>
+          <span>Data Center</span>
+          <span>Uptime Server</span>
+          <span>Anti DDoS</span>
+        </section>
+
+        <section class="site-footer-column">
+          <h3>Liên hệ</h3>
+          <a href="https://www.facebook.com/otori.kushiro#" target="_blank" rel="noreferrer">Facebook</a>
+          <a href="https://t.me/huubinh215" target="_blank" rel="noreferrer">Telegram</a>
+          <a href="https://www.youtube.com/@Vpshuubinhtm" target="_blank" rel="noreferrer">YouTube</a>
+        </section>
+      </div>
+    </div>
+
+    <div class="site-footer-bottom">
+      <p>© 2026 NgocMinh-Dev. All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="auth.js"></script>
+</body>
+</html>

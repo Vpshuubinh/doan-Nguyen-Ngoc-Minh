@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quản lý phòng chat - ChatRealtime</title>
+  <link rel="stylesheet" href="/style.css?v=11" />
+</head>
+<body class="admin-body">
+  <div class="admin-shell animate-fade-up">
+    <aside class="admin-sidebar">
+      <a href="/" class="brand">
+        <img src="/assets/images/logo.png" alt="Logo ChatRealtime" class="brand-logo pulse-logo" />
+        <span>ChatRealtime Admin</span>
+      </a>
+
+      <div class="admin-sidebar-copy">
+        <h2>Quản lý phòng</h2>
+        <p id="adminIdentity">Đang tải thông tin admin...</p>
+      </div>
+
+      <nav class="admin-nav">
+        <a href="/admin/dashboard">Dashboard quản trị</a>
+        <a href="/admin/rooms-page" class="active">Quản lý phòng chat</a>
+        <a href="/admin/users-page">Quản lý user</a>
+      </nav>
+
+      <button id="adminLogoutBtn" type="button" class="ghost-btn">Đăng xuất admin</button>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-main-header">
+        <div>
+          <h1>Quản lý phòng chat</h1>
+          <p>Trang này chỉ tập trung vào một bảng phòng chat, kèm form tạo phòng để demo CRUD.</p>
+        </div>
+
+        <div class="admin-header-actions">
+          <a class="ghost-btn" href="/chat">Mở trang chat</a>
+          <a class="primary-btn" href="/admin/dashboard">Về dashboard</a>
+        </div>
+      </header>
+
+      <section class="admin-panel">
+        <div class="admin-panel-header">
+          <div>
+            <h2>Tạo phòng mới</h2>
+            <p>Tên phòng cũng chính là mã phòng để user nhập khi vào chat.</p>
+          </div>
+        </div>
+
+        <form id="roomForm" class="admin-room-form">
+          <input id="roomNameInput" type="text" maxlength="50" placeholder="Ví dụ: room-do-an-demo" required />
+          <button type="submit" class="primary-btn">Tạo phòng</button>
+        </form>
+
+        <div id="roomNotice" class="admin-notice hidden"></div>
+      </section>
+
+      <section class="admin-panel">
+        <div class="admin-panel-header">
+          <div>
+            <h2>Danh sách phòng</h2>
+            <p>Mỗi page hiện một bảng duy nhất. Đây là bảng phòng chat.</p>
+          </div>
+          <button id="refreshRoomsBtn" type="button" class="ghost-btn">Tải lại phòng</button>
+        </div>
+
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th>Tên phòng</th>
+                <th>Số người online</th>
+                <th>Tổng tin nhắn</th>
+                <th>Ngày tạo</th>
+                <th>Hành động</th>
+              </tr>
+            </thead>
+            <tbody id="roomsTableBody">
+              <tr>
+                <td colspan="6" class="admin-empty">Đang tải danh sách phòng...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/admin-rooms.js"></script>
+</body>
+</html>

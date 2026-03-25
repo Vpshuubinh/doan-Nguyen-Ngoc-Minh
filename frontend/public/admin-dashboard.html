@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard quản trị - ChatRealtime</title>
+  <link rel="stylesheet" href="/style.css?v=11" />
+</head>
+<body class="admin-body">
+  <div class="admin-shell animate-fade-up">
+    <aside class="admin-sidebar">
+      <a href="/" class="brand">
+        <img src="/assets/images/logo.png" alt="Logo ChatRealtime" class="brand-logo pulse-logo" />
+        <span>ChatRealtime Admin</span>
+      </a>
+
+      <div class="admin-sidebar-copy">
+        <h2>Dashboard</h2>
+        <p id="adminIdentity">Đang tải thông tin admin...</p>
+      </div>
+
+      <nav class="admin-nav">
+        <a href="/admin/dashboard" class="active">Dashboard quản trị</a>
+        <a href="/admin/rooms-page">Quản lý phòng chat</a>
+        <a href="/admin/users-page">Quản lý user</a>
+      </nav>
+
+      <button id="adminLogoutBtn" type="button" class="ghost-btn">Đăng xuất admin</button>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-main-header">
+        <div>
+          <h1>Dashboard quản trị</h1>
+          <p>Trang tổng quan chỉ hiện thống kê nhanh để bạn demo và điều hướng sang các module riêng.</p>
+        </div>
+
+        <div class="admin-header-actions">
+          <a class="ghost-btn" href="/chat">Mở trang chat</a>
+          <a class="primary-btn" href="/">Về trang chủ</a>
+        </div>
+      </header>
+
+      <section class="admin-stat-grid">
+        <article class="admin-stat-card">
+          <span>Tổng phòng</span>
+          <strong id="totalRooms">0</strong>
+        </article>
+        <article class="admin-stat-card">
+          <span>Tổng user</span>
+          <strong id="totalUsers">0</strong>
+        </article>
+        <article class="admin-stat-card">
+          <span>User online</span>
+          <strong id="totalOnlineUsers">0</strong>
+        </article>
+        <article class="admin-stat-card">
+          <span>User đang active</span>
+          <strong id="totalActiveUsers">0</strong>
+        </article>
+        <article class="admin-stat-card">
+          <span>Tổng tin nhắn</span>
+          <strong id="totalMessages">0</strong>
+        </article>
+      </section>
+
+      <section class="admin-panel">
+        <div class="admin-panel-header">
+          <div>
+            <h2>Điều hướng nhanh</h2>
+            <p>Mỗi module đã được tách thành page riêng, mỗi page chỉ tập trung vào một bảng dữ liệu.</p>
+          </div>
+        </div>
+
+        <div class="admin-header-actions">
+          <a class="primary-btn" href="/admin/rooms-page">Mở quản lý phòng</a>
+          <a class="ghost-btn" href="/admin/users-page">Mở quản lý user</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/admin-dashboard.js"></script>
+</body>
+</html>

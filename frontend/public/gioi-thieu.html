@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giới thiệu - ChatRealtime</title>
+  <link rel="stylesheet" href="/style.css?v=12" />
+</head>
+<body class="landing-body about-body">
+  <header class="landing-header">
+    <a href="/" class="brand landing-brand">
+      <img src="/assets/images/logo.png" alt="Logo ChatRealtime" class="brand-logo pulse-logo" />
+      <span>ChatRealtime</span>
+    </a>
+
+    <nav class="landing-nav">
+      <a href="/gioi-thieu">Giới thiệu</a>
+      <a href="/tinh-nang">Tính năng</a>
+      <a href="/chat">Phòng chat</a>
+    </nav>
+
+    <div class="landing-actions" id="guestActions">
+      <a class="ghost-btn" href="/dang-nhap">Đăng nhập</a>
+      <a class="primary-btn" href="/dang-ky">Bắt đầu miễn phí</a>
+    </div>
+
+    <div class="landing-actions landing-account hidden" id="accountActions">
+      <span class="account-chip" id="homeAccountName"></span>
+      <a class="ghost-btn" href="/chat">Phòng chat</a>
+      <a class="ghost-btn hidden" href="/admin/dashboard" id="homeAdminBtn">Trang admin</a>
+      <button class="primary-btn" type="button" id="homeLogoutBtn">Đăng xuất</button>
+    </div>
+  </header>
+
+  <main class="intro-layout">
+    <div></div>
+
+    <article class="intro-content animate-fade-up">
+      <h1>Giới thiệu về website ChatRealtime</h1>
+
+      <p>
+        ChatRealtime là website chat được xây dựng với mục tiêu phục vụ demo, thuyết trình và thực hành
+        trong quá trình làm đồ án. Hệ thống tập trung vào những thành phần có tính trình bày cao như đăng ký
+        tài khoản, đăng nhập, chat theo phòng, lưu lịch sử tin nhắn và khu vực quản trị dành cho admin.
+      </p>
+
+      <p>
+        Điểm mạnh của website nằm ở chỗ bố cục đơn giản, dễ hiểu và dễ sử dụng. Người dùng có thể tạo tài
+        khoản mới, vào phòng chat hợp lệ, nhắn tin theo thời gian thực và xem thông tin người gửi bằng họ và tên.
+        Ở phía admin, hệ thống cung cấp dashboard để quản lý phòng chat, quản lý user và theo dõi tình trạng vận hành.
+      </p>
+
+      <figure class="intro-figure">
+        <img src="/assets/images/logo.png" alt="Logo ChatRealtime" class="about-large-image" />
+        <figcaption>Logo và hình ảnh đại diện cho hệ thống ChatRealtime.</figcaption>
+      </figure>
+
+      <h2>Mục tiêu xây dựng</h2>
+      <p>
+        Website được tạo ra để mô phỏng một hệ thống chat realtime có tổ chức rõ ràng. Thay vì chỉ làm một giao diện
+        gửi tin nhắn đơn giản, dự án hướng đến việc kết hợp cả trải nghiệm người dùng và phần quản trị, giúp bài đồ án
+        đầy đủ hơn và dễ trình bày hơn trong các buổi báo cáo.
+      </p>
+
+      <h2>Giá trị trong bài đồ án</h2>
+      <p>
+        Trong mỗi bài thuyết trình, một sản phẩm có tính liên kết giữa giao diện, database và logic xử lý sẽ tạo ấn
+        tượng tốt hơn. ChatRealtime giúp minh họa rõ quá trình lưu dữ liệu người dùng, phân quyền admin, quản lý phòng
+        chat và cập nhật tin nhắn realtime, từ đó làm nổi bật phần thực hành của đề tài.
+      </p>
+
+      <h2>Các thành phần chính</h2>
+      <p>
+        Hệ thống gồm khu vực trang chủ, trang đăng ký và đăng nhập, trang phòng chat, trang giới thiệu, trang tính năng
+        và khu vực admin. Mỗi thành phần đều có vai trò riêng, vừa hỗ trợ người dùng thao tác, vừa giúp người thuyết trình
+        dễ dàng giải thích chức năng của website theo từng phần.
+      </p>
+
+      <p>
+        Backend được xây dựng bằng Node.js và Express, kết hợp với Socket.io để xử lý trao đổi tin nhắn theo thời gian thực.
+        SQLite được sử dụng để lưu dữ liệu một cách gọn nhẹ, dễ cài đặt và phù hợp với môi trường demo hoặc bài tập lớn.
+        Frontend sử dụng HTML, CSS và JavaScript thuần để dễ đọc code, dễ chỉnh sửa và dễ mở rộng về sau.
+      </p>
+
+      <figure class="intro-figure intro-figure-soft">
+        <img src="/assets/images/logo.png" alt="Minh họa hệ thống chat" class="intro-inline-image" />
+        <figcaption>Website được thiết kế gọn, sáng và phù hợp để demo trên lớp.</figcaption>
+      </figure>
+
+      <h2>Hướng phát triển trong tương lai</h2>
+      <p>
+        Sau phiên bản hiện tại, website có thể tiếp tục bổ sung các tính năng như gửi file, gửi emoji, avatar người dùng,
+        thông báo realtime, tìm kiếm tin nhắn và hỗ trợ nhiều loại phòng chat hơn. Nếu cần triển khai ở mức độ lớn hơn,
+        hệ thống cũng có thể chuyển sang sử dụng cơ sở dữ liệu mạnh hơn như MySQL hoặc PostgreSQL.
+      </p>
+    </article>
+
+    <div></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-surface">
+      <div class="site-footer-top">
+        <div class="site-footer-brand">
+          <a href="/" class="brand site-footer-logo">
+            <img src="/assets/images/logo.png" alt="Logo ChatRealtime" class="brand-logo" />
+            <span>ChatRealtime</span>
+          </a>
+          <p>
+            Nền tảng chat realtime gọn nhẹ dành cho demo, thuyết trình và phát triển đồ án với giao diện
+            tiếng Việt, quản lý phòng chat và khu vực admin riêng.
+          </p>
+        </div>
+
+        <div class="site-footer-columns">
+          <section class="site-footer-column">
+            <h3>Sản phẩm</h3>
+            <a href="/gioi-thieu">Giới thiệu</a>
+            <a href="/tinh-nang">Tính năng</a>
+            <a href="/chat">Phòng chat</a>
+          </section>
+
+          <section class="site-footer-column">
+            <h3>Điều khoản</h3>
+            <span>Data Center</span>
+            <span>Uptime Server</span>
+            <span>Anti DDoS</span>
+          </section>
+
+          <section class="site-footer-column">
+            <h3>Liên hệ</h3>
+            <a href="https://www.facebook.com/otori.kushiro#" target="_blank" rel="noreferrer">Facebook</a>
+            <a href="https://t.me/huubinh215" target="_blank" rel="noreferrer">Telegram</a>
+            <a href="https://www.youtube.com/@Vpshuubinhtm" target="_blank" rel="noreferrer">YouTube</a>
+          </section>
+        </div>
+      </div>
+
+      <div class="site-footer-bottom">
+        <p>© 2026 NgocMinh-Dev. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/home.js"></script>
+</body>
+</html>

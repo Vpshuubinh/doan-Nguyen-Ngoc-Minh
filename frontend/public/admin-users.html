@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quản lý user - ChatRealtime</title>
+  <link rel="stylesheet" href="/style.css?v=12" />
+</head>
+<body class="admin-body">
+  <div class="admin-shell animate-fade-up">
+    <aside class="admin-sidebar">
+      <a href="/" class="brand">
+        <img src="/assets/images/logo.png" alt="Logo ChatRealtime" class="brand-logo pulse-logo" />
+        <span>ChatRealtime Admin</span>
+      </a>
+
+      <div class="admin-sidebar-copy">
+        <h2>Quản lý user</h2>
+        <p id="adminIdentity">Đang tải thông tin admin...</p>
+      </div>
+
+      <nav class="admin-nav">
+        <a href="/admin/dashboard">Dashboard quản trị</a>
+        <a href="/admin/rooms-page">Quản lý phòng chat</a>
+        <a href="/admin/users-page" class="active">Quản lý user</a>
+      </nav>
+
+      <button id="adminLogoutBtn" type="button" class="ghost-btn">Đăng xuất admin</button>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-main-header">
+        <div>
+          <h1>Quản lý user</h1>
+          <p>Trang này hiển thị trạng thái online/offline theo thời gian thực và hỗ trợ phân trang danh sách user.</p>
+        </div>
+
+        <div class="admin-header-actions">
+          <a class="ghost-btn" href="/chat">Mở trang chat</a>
+          <a class="primary-btn" href="/admin/dashboard">Về dashboard</a>
+        </div>
+      </header>
+
+      <section class="admin-panel">
+        <div class="admin-panel-header">
+          <div>
+            <h2>Danh sách user</h2>
+            <p id="userRealtimeNote">Tự cập nhật trạng thái mỗi 5 giây. Hiển thị 10 user trên mỗi trang.</p>
+          </div>
+          <button id="refreshUsersBtn" type="button" class="ghost-btn">Tải lại user</button>
+        </div>
+
+        <div id="userNotice" class="admin-notice hidden"></div>
+
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th>User</th>
+                <th>Email</th>
+                <th>Trạng thái</th>
+                <th>Phòng hiện tại</th>
+                <th>Role</th>
+                <th>Hành động</th>
+              </tr>
+            </thead>
+            <tbody id="usersTableBody">
+              <tr>
+                <td colspan="7" class="admin-empty">Đang tải danh sách user...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="admin-pagination" id="usersPagination"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/admin-users.js"></script>
+</body>
+</html>

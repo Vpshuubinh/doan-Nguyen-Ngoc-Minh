@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phòng chat - ChatRealtime</title>
+  <link rel="stylesheet" href="style.css?v=11" />
+</head>
+<body>
+  <main class="app animate-fade-up">
+    <section id="loginScreen" class="card">
+      <a href="/" class="brand" style="color:#0f172a;margin-bottom:10px;display:inline-flex;">
+        <img src="/assets/images/logo.png" alt="Logo ChatRealtime" class="brand-logo" />
+        <span>ChatRealtime</span>
+      </a>
+
+      <h1>Vào phòng chat</h1>
+      <p class="subtitle">Tài khoản hiện tại: <strong id="accountName">Đang tải...</strong></p>
+
+      <label for="roomInput">Mã phòng</label>
+      <input id="roomInput" type="text" value="room-2-users" maxlength="50" list="roomsList" />
+      <datalist id="roomsList"></datalist>
+      <p class="hint-text">Hãy dùng phòng đã được admin tạo. Mặc định có sẵn: room-2-users.</p>
+
+      <div class="account-actions">
+        <button id="loginBtn" class="primary-btn">Vào phòng</button>
+        <a id="adminDashboardBtn" href="/admin/dashboard" class="ghost-btn hidden">Trang admin</a>
+        <button id="accountLogoutBtn" type="button" class="ghost-btn">Đăng xuất tài khoản</button>
+      </div>
+      <p id="loginError" class="error-text"></p>
+    </section>
+
+    <section id="chatScreen" class="card hidden">
+      <header class="chat-header">
+        <div>
+          <h2>Phòng: <span id="roomLabel"></span></h2>
+          <p>Xin chào, <strong id="currentUser"></strong></p>
+        </div>
+        <button id="logoutBtn" class="ghost-btn">Rời phòng</button>
+      </header>
+
+      <div id="messages" class="messages"></div>
+
+      <form id="messageForm" class="input-area">
+        <input id="messageInput" type="text" placeholder="Nhập tin nhắn..." autocomplete="off" />
+        <button type="submit" class="primary-btn">Gửi</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

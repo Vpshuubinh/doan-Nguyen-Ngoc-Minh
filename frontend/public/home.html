@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatRealtime - Trang chủ</title>
+  <link rel="stylesheet" href="style.css?v=12" />
+</head>
+<body class="landing-body">
+  <header class="landing-header">
+    <a href="/" class="brand landing-brand">
+      <img src="/assets/images/logo.png" alt="Logo ChatRealtime" class="brand-logo pulse-logo" />
+      <span>ChatRealtime</span>
+    </a>
+
+    <nav class="landing-nav">
+      <a href="/gioi-thieu">Giới thiệu</a>
+      <a href="/tinh-nang">Tính năng</a>
+      <a href="/chat">Phòng chat</a>
+    </nav>
+
+    <div class="landing-actions" id="guestActions">
+      <a class="ghost-btn" href="/dang-nhap">Đăng nhập</a>
+      <a class="primary-btn" href="/dang-ky">Bắt đầu miễn phí</a>
+    </div>
+
+    <div class="landing-actions landing-account hidden" id="accountActions">
+      <span class="account-chip" id="homeAccountName"></span>
+      <a class="ghost-btn" href="/chat">Phòng chat</a>
+      <a class="ghost-btn hidden" href="/admin/dashboard" id="homeAdminBtn">Trang admin</a>
+      <button class="primary-btn" type="button" id="homeLogoutBtn">Đăng xuất</button>
+    </div>
+  </header>
+
+  <main class="landing-main" id="gioi-thieu">
+    <section class="hero-card animate-fade-up">
+      <h1>Chat realtime gọn nhẹ, dễ demo, dễ thuyết trình và dễ mở rộng đồ án</h1>
+      <p>
+        Ứng dụng chat sử dụng giao diện tiếng Việt, lưu lịch sử vào SQLite, có khu vực admin và
+        cho phép vào phòng nhanh theo đúng phong cách demo trên lớp.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="primary-btn" href="/dang-ky">Bắt đầu miễn phí</a>
+        <a class="ghost-btn" href="/dang-nhap">Tôi đã có tài khoản</a>
+        <a class="secondary-btn" href="/demo-chat">Dùng thử ngay (không cần đăng ký)</a>
+        <a class="ghost-btn" href="/demo-chat">Vào chat demo</a>
+      </div>
+    </section>
+
+    <section class="feature-grid animate-fade-up" id="tinh-nang">
+      <article class="feature-item">
+        <h3>Gửi nhận realtime</h3>
+        <p>Nhắn tin gần như tức thì với Socket.io, phù hợp để demo tính năng chat trực tiếp.</p>
+      </article>
+      <article class="feature-item">
+        <h3>Lưu lịch sử</h3>
+        <p>Mọi tin nhắn được lưu vào SQLite để bạn có thể trình bày phần database dễ dàng hơn.</p>
+      </article>
+      <article class="feature-item">
+        <h3>Có trang admin</h3>
+        <p>Quản lý phòng, user và thống kê nhanh bằng giao diện riêng cho tài khoản admin.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-surface">
+      <div class="site-footer-top">
+        <div class="site-footer-brand">
+          <a href="/" class="brand site-footer-logo">
+            <img src="/assets/images/logo.png" alt="Logo ChatRealtime" class="brand-logo" />
+            <span>ChatRealtime</span>
+          </a>
+          <p>
+            Nền tảng chat realtime gọn nhẹ dành cho demo, thuyết trình và phát triển đồ án với giao diện
+            tiếng Việt, quản lý phòng chat và khu vực admin riêng.
+          </p>
+        </div>
+
+        <div class="site-footer-columns">
+          <section class="site-footer-column">
+            <h3>Sản phẩm</h3>
+            <a href="/gioi-thieu">Giới thiệu</a>
+            <a href="/tinh-nang">Tính năng</a>
+            <a href="/chat">Phòng chat</a>
+          </section>
+
+          <section class="site-footer-column">
+            <h3>Điều khoản</h3>
+            <span>Data Center</span>
+            <span>Uptime Server</span>
+            <span>Anti DDoS</span>
+          </section>
+
+          <section class="site-footer-column">
+            <h3>Liên hệ</h3>
+            <a href="https://www.facebook.com/otori.kushiro#" target="_blank" rel="noreferrer">Facebook</a>
+            <a href="https://t.me/huubinh215" target="_blank" rel="noreferrer">Telegram</a>
+            <a href="https://www.youtube.com/@Vpshuubinhtm" target="_blank" rel="noreferrer">YouTube</a>
+          </section>
+        </div>
+      </div>
+
+      <div class="site-footer-bottom">
+        <p>© 2026 NgocMinh-Dev. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/home.js"></script>
+</body>
+</html>
